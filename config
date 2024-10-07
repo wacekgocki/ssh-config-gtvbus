@@ -1,0 +1,61 @@
+Host intellect
+ HostName 51.195.42.55
+ User ubuntu
+
+Host gtvserver1
+ HostName fortigate1.gtvbus.pl
+ Port 63192
+
+Host gtvserver2
+ HostName fortigate2.gtvbus.pl
+ Port 64171
+
+Host gtvwebserver1
+ HostName punkt1.gtvbus.pl
+
+Host gtvwebserver2
+ HostName punkt2.gtvbus.pl
+
+Host gtvbackupserver1
+ HostName punkt1.gtvbus.pl
+ Port 62842
+
+Host gtvbackupserver2
+ HostName punkt2.gtvbus.pl
+ Port 62842
+
+Host itdesk
+ HostName gtv01.itdesk.eu
+ User gtv
+
+Host gtvmydevil
+  HostName s54.mydevil.net
+  User gtvbus
+
+Host pntvps
+  HostName 85.202.58.30
+  Port 22022
+  IdentityFile ~/.ssh/id_rsa_pass
+
+Host gtvbus-gitlab
+#  HostName 164.92.165.241
+  HostName gitlab.gtvbus.pl
+#  User root
+  User wacek
+  IdentityFile ~/.ssh/id_rsa_pass
+
+# defaultowe opcje - maja byc na koncu pliku
+# ssh nie nadpisuje opcji w miare czytania pliku, pierwsze ustawienie
+# danej opcji juz zostaje do konca
+# mozna tez wykluczyc pewne hosty ze stosowania opcji domyslnych poprzez:
+# Host * !itdesk
+Host *
+ ForwardAgent no
+ ForwardX11 no
+ ForwardX11Trusted no
+ User wacek
+ Port 22
+ Protocol 2
+ ServerAliveInterval 60
+ ServerAliveCountMax 30
+ IdentityFile ~/.ssh/id_rsa
