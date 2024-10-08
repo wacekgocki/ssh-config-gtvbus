@@ -1,6 +1,10 @@
-Host intellect
- HostName 51.195.42.55
- User ubuntu
+Host gtvbackupserver1
+ HostName punkt1.gtvbus.pl
+ Port 62842
+
+Host gtvbackupserver2
+ HostName punkt2.gtvbus.pl
+ Port 62842
 
 Host gtvserver1
  HostName fortigate1.gtvbus.pl
@@ -16,33 +20,58 @@ Host gtvwebserver1
 Host gtvwebserver2
  HostName punkt2.gtvbus.pl
 
-Host gtvbackupserver1
- HostName punkt1.gtvbus.pl
- Port 62842
+Host gtvmydevil
+ HostName s54.mydevil.net
+ User gtvbus
 
-Host gtvbackupserver2
- HostName punkt2.gtvbus.pl
- Port 62842
+Host intellect
+ HostName 51.195.42.55
+ User ubuntu
 
 Host itdesk
  HostName gtv01.itdesk.eu
  User gtv
 
-Host gtvmydevil
-  HostName s54.mydevil.net
-  User gtvbus
+Host panel-itdesk
+ # droplet digitalocean nazywa sie sklep.gtvbus.pl
+ # ale nie jest skierowany na ta domene
+ HostName 161.35.212.90
+ Port 16135
+ User wacek
 
 Host pntvps
-  HostName 85.202.58.30
-  Port 22022
-  IdentityFile ~/.ssh/id_rsa_pass
+ HostName 85.202.58.30
+ Port 22022
+ # IdentityFile ~/.ssh/id_rsa_pass
+
+Host sandbox
+ HostName 207.154.248.220
+ User root
+
+Host grafana
+ HostName 192.168.2.95
+ User wacek
+
+Host firma
+ HostName 192.168.2.118
+ User WacławG
+
+Host firma2
+ HostName 192.168.2.119
+ User WacławG 
+
+Host 2cs
+ HostName 192.168.2.126
+ User wacek
+
+Host webapp
+ HostName 10.10.10.20
+ User wacek
 
 Host gtvbus-gitlab
-#  HostName 164.92.165.241
   HostName gitlab.gtvbus.pl
-#  User root
   User wacek
-  IdentityFile ~/.ssh/id_rsa_pass
+#  IdentityFile ~/.ssh/id_rsa_pass
 
 # defaultowe opcje - maja byc na koncu pliku
 # ssh nie nadpisuje opcji w miare czytania pliku, pierwsze ustawienie
