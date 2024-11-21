@@ -1,3 +1,3 @@
 # ssh-config-gtvbus
 
-Konfiguracja ssh do pracy w gtvbus
+Konfiguracja ssh do pracy z serwerami gtvbus
