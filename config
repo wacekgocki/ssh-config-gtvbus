@@ -64,6 +64,10 @@ Host 2cs
  HostName 192.168.2.126
  User wacek
 
+Host push-app
+ HostName 192.168.2.96
+ User wacek
+
 Host webapp
  HostName 10.10.10.20
  User wacek
