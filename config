@@ -77,6 +77,10 @@ Host gtvbus-gitlab
   User wacek
 #  IdentityFile ~/.ssh/id_rsa_pass
 
+Host loyalty
+  HostName loyaltyproxy.gtvbus.pl
+  User wacek
+
 # defaultowe opcje - maja byc na koncu pliku
 # ssh nie nadpisuje opcji w miare czytania pliku, pierwsze ustawienie
 # danej opcji juz zostaje do konca
